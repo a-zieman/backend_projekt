@@ -1,0 +1,23 @@
+{
+  "name": "backend_articles",
+  "version": "1.0.0",
+  "description": "API for articles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-zieman/backend_projekt.git"
+  },
+  "keywords": [
+    "api",
+    "articles"
+  ],
+  "author": "Anna Zieman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-zieman/backend_projekt/issues"
+  },
+  "homepage": "https://github.com/a-zieman/backend_projekt#readme"
+}
