@@ -73,12 +73,10 @@ exports.user_get_by_username = (req, res) => {
       if (!user) {
         return res.status(404).json({ message: 'User not found' });
       }
-      // Do not send sensitive information like passwords
       res.status(200).json({
         id: user._id,
         username: user.username,
         email: user.email,
-        // add other fields you want to return
       });
     })
     .catch(err => res.status(500).json({ error: err }));
@@ -86,7 +84,7 @@ exports.user_get_by_username = (req, res) => {
 
 exports.user_delete = (req, res) => {
   const usernameToDelete = req.params.username;
-  const authenticatedUsername = req.userData.username; // Assuming username is included in JWT token
+  const authenticatedUsername = req.userData.username;
 
   if (usernameToDelete !== authenticatedUsername) {
     return res.status(403).json({ message: 'Not authorized to delete this user' });
